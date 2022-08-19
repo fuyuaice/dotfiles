@@ -1,0 +1,148 @@
+{
+    "editor.fontFamily": "source han code jp",
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.largeFileOptimizations": false,
+    "editor.cursorBlinking": "solid",
+    "editor.lineNumbers": "relative",
+    "window.menuBarVisibility": "toggle",
+    // latex
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatexmk"
+            ]
+        },
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk",
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                // "-synctex=1",
+                // "-interaction=nonstopmode",
+                // "-file-line-error",
+                // "-pdf",
+                // "-outdir=%OUTDIR%",
+                // "%DOC%"
+                "-e",
+                "$latex=q/uplatex %O -synctex=1 -interaction=nonstopmode -file-line-error %S/",
+                "-e",
+                "$bibtex=q/upbibtex %O %B/",
+                "-e",
+                "$biber=q/biber %O --bblencoding=utf8 -u -U --output_safechars %B/",
+                "-e",
+                "$makeindex=q/upmendex %O -o %D %S/",
+                "-e",
+                "$dvipdf=q/dvipdfmx %O -o %D %S/",
+                "-norc",
+                "-gg",
+                "-pdfdvi",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                // "-synctex=1",
+                // "-interaction=nonstopmode",
+                // "-file-line-error",
+                // "-lualatex",
+                // "-outdir=%OUTDIR%",
+                // "%DOC%"
+                "-e",
+                "$lualatex=q/lualatex %O -synctex=1 -interaction=nonstopmode -file-line-error %S/",
+                "-e",
+                "$bibtex=q/upbibtex %O %B/",
+                "-e",
+                "$biber=q/biber %O --bblencoding=utf8 -u -U --output_safechars %B/",
+                "-e",
+                "$makeindex=q/upmendex %O -o %D %S/",
+                "-norc",
+                "-gg",
+                "-pdflua",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    // markdown_pdf
+    "markdown-pdf.styles": [
+        "/home/soni6/dotfiles/vscode/markdown.css"
+    ],
+    "markdown-pdf.footerTemplate": "<div style=\"font-size: 9px; position: absolute; width: 74.6%; text-align: center; margin 0;\"> <span class='pageNumber'></span> / <span class='totalPages'></span></div><div style=\"font-size: 7.5px; margin-left: auto; margin-right: 1cm;\">fuyuaice</div>",
+    // vim
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "u",
+                "u"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "r"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ],
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "after": [
+                ";"
+            ],
+        },
+        {
+            "before": [
+                "<Enter>"
+            ],
+            "commands": [
+                "editor.action.insertLineAfter"
+            ]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.enableNeovim": true,
+    "vim.useCtrlKeys": false,
+
+    // arduino
+    "arduino.commandPath": "arduino",
+    "arduino.path": "/usr/share/arduino",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    
+    "workbench.colorTheme": "Alice-deep",
+    "git.autofetch": true,
+}
