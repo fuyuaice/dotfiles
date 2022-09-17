@@ -6,4 +6,4 @@ configuration {
 	kb-mode-next: "Control+o";
 	kb-mode-previous: "Control+i";
 }
-@theme "/usr/share/rofi/themes/Adapta-Nokto.rasi"
+@theme "nord.rasi"
