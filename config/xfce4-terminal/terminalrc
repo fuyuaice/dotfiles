@@ -1,5 +1,5 @@
 [Configuration]
-FontName=Hack 12
+FontName=Hack Nerd Font 12
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -38,4 +38,6 @@ MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
 BackgroundImageFile=/home/fuyuaice/Pictures/Screenshot_20220428_224803.png
 BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_FILLED
 BackgroundImageShading=0.250000
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+BackgroundDarkness=0.900000
 
