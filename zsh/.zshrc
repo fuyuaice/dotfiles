@@ -122,6 +122,7 @@ alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -a -l'
 alias lf='ls -1 -F'
+alias bat='bat --paging=never'
 
 # alias xephyr='Xephyr :1 -ac -br -screen 800x500'
 
