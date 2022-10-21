@@ -1,4 +1,4 @@
-# cat $HOME/tasks.md
+# bat $HOME/tasks.md
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -122,7 +122,7 @@ alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -a -l'
 alias lf='ls -1 -F'
-alias bat='bat --paging=never'
+alias bat='bat --paging=never --theme=TwoDark'
 
 # alias xephyr='Xephyr :1 -ac -br -screen 800x500'
 
@@ -132,7 +132,7 @@ alias ip='ip -color=auto'
 alias ls='ls --color=auto'
 
 # tasks-tool
-# alias task='nvim tasks.md'
+alias task='nvim tasks.md'
 
 # flutter
 # export PATH="$PATH:/opt/flutter/bin"

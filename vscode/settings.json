@@ -1,5 +1,7 @@
 {
     "editor.fontFamily": "source han code jp",
+    // "editor.fontFamily": "Hack Nerd Font",
+    // "editor.fontSize": 15,
     "editor.wordWrap": "on",
     "editor.bracketPairColorization.enabled": true,
     "editor.renderWhitespace": "boundary",
@@ -78,10 +80,11 @@
     ],
     "latex-workshop.view.pdf.viewer": "tab",
     // markdown_pdf
-    "markdown-pdf.styles": [
-        "/home/soni6/dotfiles/vscode/markdown.css"
-    ],
-    "markdown-pdf.footerTemplate": "<div style=\"font-size: 9px; position: absolute; width: 74.6%; text-align: center; margin 0;\"> <span class='pageNumber'></span> / <span class='totalPages'></span></div><div style=\"font-size: 7.5px; margin-left: auto; margin-right: 1cm;\">fuyuaice</div>",
+    // "markdown-pdf.styles": [
+    //     "/home/fuyuaice/dotfiles/vscode/markdown.css"
+    // ],
+    // "markdown-pdf.footerTemplate": "<div style=\"font-size: 9px; position: absolute; width: 74.6%; text-align: center; margin 0;\"> <span class='pageNumber'></span> / <span class='totalPages'></span></div><div style=\"font-size: 7.5px; margin-left: auto; margin-right: 1cm;\">fuyuaice</div>",
+    "markdown-pdf.footerTemplate": "<div style=\"font-size: 9px; position: absolute; width: 74.6%; text-align: center; margin 0;\"> <span class='pageNumber'></span> / <span class='totalPages'></span></div><div style=\"font-size: 7.5px; margin-left: auto; margin-right: 1cm;\"></div>",
     // vim
     "vim.insertModeKeyBindings": [
         {
@@ -145,4 +148,8 @@
     
     "workbench.colorTheme": "Alice-deep",
     "git.autofetch": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.enabled": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
 }

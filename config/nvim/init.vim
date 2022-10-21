@@ -62,6 +62,7 @@ call dein#add('/home/fuyuaice/.cache/dein/repos/github.com/Shougo/dein.vim')
 "call dein#add('Shougo/neosnippet.vim')
 "call dein#add('Shougo/neosnippet-snippets')
 call dein#add('itchyny/lightline.vim')
+call dein#add('arcticicestudio/nord-vim')
 
 " Required:
 call dein#end()
