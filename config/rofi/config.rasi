@@ -1,0 +1,9 @@
+configuration {
+    modi: "window,drun";
+    sidebar-mode: true;
+	font: "IBM Plex Sans JP Medium 14";
+	show-icons: true;
+	kb-mode-next: "Control+o";
+	kb-mode-previous: "Control+i";
+}
+@theme "nord.rasi"
