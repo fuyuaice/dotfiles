@@ -51,7 +51,7 @@ Jetpack 'Shougo/ddc.vim'
 Jetpack 'Shougo/pum.vim'
 Jetpack 'Shougo/ddc-ui-pum'
 Jetpack 'Shougo/ddc-source-around'
-Jetpack 'Shougo/ddc-source-nvim-lsp'
+Jetpack 'Shougo/ddc-source-lsp'
 Jetpack 'uga-rosa/ddc-source-vsnip'
 Jetpack 'Shougo/ddc-filter-matcher_head'
 Jetpack 'Shougo/ddc-filter-matcher_length'
@@ -75,7 +75,7 @@ Jetpack 'williamboman/mason.nvim'
 Jetpack 'williamboman/mason-lspconfig.nvim'
 Jetpack 'vim-skk/skkeleton'
 Jetpack 'itchyny/lightline.vim'
-Jetpack 'yasunori-kirin0418/lightline_skk.vim'
+Jetpack 'yasunori0418/statusline_skk.vim'
 Jetpack 'nvim-lua/plenary.nvim' " To use lua plugins
 Jetpack 'nvim-telescope/telescope.nvim'
 Jetpack 'nvim-telescope/telescope-file-browser.nvim'
@@ -93,6 +93,7 @@ Jetpack 'nvim-treesitter/nvim-treesitter' " Syntacs height light
 Jetpack 'windwp/nvim-autopairs'
 Jetpack 'akinsho/toggleterm.nvim'
 Jetpack 'lukas-reineke/indent-blankline.nvim'
+Jetpack 'petertriho/nvim-scrollbar'
 call jetpack#end()
 
 " colorscheme----------------------------------------
@@ -107,7 +108,7 @@ colorscheme fuyu
 
 call ddc#custom#patch_global('ui', 'pum')
 
-call ddc#custom#patch_global('sources', ['around','skkeleton','nvim-lsp','file','vsnip'])
+call ddc#custom#patch_global('sources', ['around','skkeleton','lsp','file','vsnip'])
 
 call ddc#custom#patch_global('sourceOptions', #{
     \ _: #{
@@ -123,7 +124,7 @@ call ddc#custom#patch_global('sourceOptions', #{
     \   sorters: [],
     \   isVolatile: v:true,
     \ },
-    \ nvim-lsp: #{
+    \ lsp: #{
     \   mark: '[LSP]',
     \   forceCompletionPattern: '\.\w*|:\w*|->\w*',
     \ },
@@ -148,7 +149,7 @@ call ddc#custom#patch_global('sourceOptions', #{
     "\   },
     "\ }})
 call ddc#custom#patch_global('sourceParams', #{
-      \   nvim-lsp: #{
+      \   lsp: #{
       \     snippetEngine: denops#callback#register({
       \           body -> vsnip#anonymous(body)
       \     }),
@@ -243,11 +244,11 @@ let g:lightline = {
     \             [ 'readonly', 'filename', 'modified' ] ]
     \   },
     \ 'component_function': {
-    \   'skk_mode': 'g:lightline_skk#mode',
+    \   'skk_mode': 'statusline_skk#mode',
     \   },
     \ }
 
-call lightline_skk#option('display', {
+call statusline_skk#option('display', {
     \ 'hiragana': 'あ',
     \ 'katakana': 'ア',
     \ 'hankaku-katakana': 'ｱｧ',
@@ -275,3 +276,6 @@ let g:rustfmt_autosave = 1
 
 " autopairs----------------------------------------
 :luafile ~/.config/nvim/lua/plugins/autopairs.lua
+
+" scrollbar----------------------------------------
+:luafile ~/.config/nvim/lua/plugins/scrollbar.lua

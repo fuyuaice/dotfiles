@@ -18,9 +18,9 @@ require("mason-lspconfig").setup_handlers {
         --}
         --require("lspconfig")[server_name].setup {opt}
         --local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        local capabilities = require('ddc_nvim_lsp').make_client_capabilities()
+        local capabilities = require('ddc_source_lsp').make_client_capabilities()
         require("lspconfig")[server_name].setup {
-            capabilities = capabilities
+            capabilities = capabilities,
         }
     end,
     --["rust_analyzer"] = function ()
